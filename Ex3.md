@@ -46,7 +46,11 @@ int main() {
     cout << "Average turn around time = " << avg_tat << "\n";
 }
 ```
+
 ## Output:
+<img width="861" height="798" alt="image" src="https://github.com/user-attachments/assets/cb196cd3-2dee-476f-9ccb-9adf5024f0be" />
+
+## Result:
 ```
 Input:
 6 7 8 9
@@ -60,6 +64,3 @@ Processes   BT time   WT time   TA time
 Average waiting time = 10
 Average turn around time = 17.5
 ```
-## Result:
-<img width="861" height="798" alt="image" src="https://github.com/user-attachments/assets/cb196cd3-2dee-476f-9ccb-9adf5024f0be" />
-
