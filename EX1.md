@@ -51,12 +51,12 @@ int main() {
 ```
 
 ## Output:
+<img width="862" height="361" alt="image" src="https://github.com/user-attachments/assets/dd587035-f9b1-43c4-8396-95f4683fe4ee" />
+
+## Result:
 ```
 Input:
 10 20
 Output:
 The Result is:30
 ```
-## Result:
-<img width="862" height="361" alt="image" src="https://github.com/user-attachments/assets/dd587035-f9b1-43c4-8396-95f4683fe4ee" />
-
