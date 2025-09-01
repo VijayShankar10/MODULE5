@@ -39,6 +39,9 @@ int main() {
 ```
 
 ## Output:
+<img width="857" height="506" alt="image" src="https://github.com/user-attachments/assets/905d6ebb-1186-49cc-8586-ab9d65ac4810" />
+
+## Result:
 ```
 Input:
 7
@@ -49,6 +52,3 @@ Size of the Queue is:7
 The First Element of the Queue is:9
 The Last Element of the Queue is:2
 ```
-## Result:
-<img width="857" height="506" alt="image" src="https://github.com/user-attachments/assets/905d6ebb-1186-49cc-8586-ab9d65ac4810" />
-
