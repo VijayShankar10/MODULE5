@@ -41,6 +41,9 @@ int main() {
 ```
 
 ## Output:
+<img width="878" height="447" alt="image" src="https://github.com/user-attachments/assets/3c080bfb-35fe-4f1a-806c-6d102dfc7285" />
+
+## Result:
 ```
 Input:
 5
@@ -50,6 +53,3 @@ Output:
 Size of the stack: 5
 50.5 40.4 30.3 20.2 10.1
 ```
-## Result:
-<img width="878" height="447" alt="image" src="https://github.com/user-attachments/assets/3c080bfb-35fe-4f1a-806c-6d102dfc7285" />
-
