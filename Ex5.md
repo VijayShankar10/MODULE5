@@ -1,10 +1,10 @@
 # Ex.No:5  
-# Ex.Name: Infix to Prefix Conversion using Stack (STL)  
+# Ex.Name: Write a CPP Program to insert fractional values in to Queue ADT  and display size of the queue,and first,Last element of the queue (use STL and set maximum size of the is 100)  
 
 ## Date:  
 
 ## Aim:  
-To convert an infix expression into a prefix expression using Stack STL.  
+To write Last element of the queue using STL.
 
 ## Algorithm:  
 1. Start the program.  
@@ -18,63 +18,41 @@ To convert an infix expression into a prefix expression using Stack STL.
 
 ## Program:
 ```cpp
-#include <bits/stdc++.h>
+#include <iostream>
+#include<queue>
 using namespace std;
-
-int prec(char c) {
-    if (c=='^') return 3;
-    if (c=='*'||c=='/') return 2;
-    if (c=='+'||c=='-') return 1;
-    return 0;
-}
-bool rightAssoc(char c){ return c=='^'; }
-bool isOp(char c){ return c=='+'||c=='-'||c=='*'||c=='/'||c=='^'; }
-
-string infixToPrefix(string s){
-    reverse(s.begin(), s.end());
-    for(char &c : s){
-        if(c=='(') c=')';
-        else if(c==')') c='(';
+int main()
+{
+    queue<float>s;
+    int i,n;
+    float x[100];
+    cin>>n;
+    for(i=1;i<=n;i++)
+    {
+    cin>>x[i];
+    s.push(x[i]);
     }
-
-    stack<char> st;
-    string postfix;
-    for(char c : s){
-        if(isalnum(c)) postfix+=c;
-        else if(c=='(') st.push(c);
-        else if(c==')'){
-            while(!st.empty() && st.top()!='('){ postfix+=st.top(); st.pop(); }
-            st.pop();
-        }
-        else if(isOp(c)){
-            while(!st.empty() && (prec(st.top())>prec(c) || 
-                 (prec(st.top())==prec(c) && !rightAssoc(c)))){
-                postfix+=st.top(); st.pop();
-            }
-            st.push(c);
-        }
-    }
-    while(!st.empty()){ postfix+=st.top(); st.pop(); }
-    reverse(postfix.begin(), postfix.end());
-    return postfix;
-}
-
-int main(){
-    string infix; cin >> infix;
-    cout << "Prefix expression: " << infixToPrefix(infix) << "\n";
+    cout<<"Size of the Queue is:"<<s.size()<<endl;
+    cout<<"The First Element of the Queue is:"<<s.front()<<endl;
+    cout<<"The Last Element of the Queue is:"<<s.back()<<endl;
+    
 }
 ```
+
 ## Output:
+<img width="870" height="411" alt="image" src="https://github.com/user-attachments/assets/073c40d2-3cef-476c-a379-53df39ea78ed" />
+
+## Result:
 ```
 Input:
-a+b*c-d
+5
+65.6 67.4 56.89 76.7 .9
 Output:
 Prefix expression: -+a*bcd
 Input:
 A*B+C/D
 Output:
-Prefix expression: +*AB/CD
+Size of the Queue is:5
+The First Element of the Queue is:65.6
+The Last Element of the Queue is:0.9
 ```
-## Result:
-<img width="870" height="411" alt="image" src="https://github.com/user-attachments/assets/073c40d2-3cef-476c-a379-53df39ea78ed" />
-
